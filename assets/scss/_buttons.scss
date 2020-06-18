@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 18, 2020, 10:10:03 AM
+    Author     : Marie Sagehomme
+*/
+
+.btn-primary{
+    background-color: $primary-color;
+    padding: 15px;
+    border: none;
+    
+    a {
+       color: $primary-color-btn;
+       text-decoration: none;
+       font-size: 1em;
+       
+       @include respond-to(medium) {
+            font-size: 1.5em;
+        }
+    }
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.btn-secondary{
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid $primary-color;
+    
+    @include respond-to(medium) {
+        padding: 10px;
+    }
+
+    a {
+       color: $primary-color;
+       text-decoration: none;
+       font-size: 1em;
+       font-family: 'Roboto', sans-serif;
+       font-weight: 100;
+       text-transform: uppercase;
+       
+       @include respond-to(medium) {
+            font-size: 1.5em;
+        }
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 17, 2020, 2:26:48 PM
+    Author     : Marie Sagehomme
+*/
+@import "/_variables";
+@import "/_header";
+@import "/_buttons";
+@import "/_gallery";
+@import "/_projects";
+@import "/_mixins";
+
+* {
+    box-sizing : border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font;
+    font-weight: 200;
+    text-transform: uppercase;
+    max-width: $width-mobile;
+    padding: 20px;
+    margin: auto;
+    
+    @include respond-to(medium) {
+        max-width: $width;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 3px;
+    color: $primary-color;
+    } 
+
+    h1, h2 {
+       font-size: 1.8em;
+       
+        @include respond-to(small) {
+            font-size: 2.5em;
+        }
+       
+       @include respond-to(medium) {
+            font-size: 7em;
+        }
+    }
+
+    h3, h4 {
+        font-size: 1.8em;
+        
+        @include respond-to(small) {
+            font-size: 2em;
+        }
+        
+        @include respond-to(medium) {
+            font-size: 3em;
+        }
+    }
+
+    h5, h6 {
+        font-size: 1em;
+        
+        @include respond-to(medium) {
+            font-size: 2em;
+        }
+    }
+}
+
+
+

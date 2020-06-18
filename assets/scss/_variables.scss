@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 18, 2020, 9:39:50 AM
+    Author     : Marie Sagehomme
+*/
+
+@import'_mixins';
+
+//colors
+$primary-color: #323232;
+$secondary-color: #FF8166;
+$primary-color-btn: white;
+
+
+//width 
+$width: 1200px;
+$width-mobile: 500px;
+
+//typo
+$font: 'Roboto', sans-serif;;
+$font-title:'Anton', sans-serif;
+
+//------------------------
+//Media queries variables
+//------------------------
+$breakpoints: (
+  'xsmall': 351px,
+  'small': 768px,
+  'medium': 992px,
+  'large': 1200px,
+  'huge': 1680px
+) !default;

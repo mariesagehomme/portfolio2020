@@ -2,11 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="description" content="Welcome on my portfolio, guys!" />
+        <meta name="keywords" content="portfolio, front, developer, HTML, PHP" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}PORTFOLIO - MARIE SAGEHOMME{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        {% block stylesheets %}
+             {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
     <body>
+        <nav class="main-menu">
+            <a href="{{ path('home') }}" class="logo">Portfolio</a>
+            <div>
+                <button class="btn-primary"><a href="https://github.com/mariesagehomme" target="_blank">Github</a></button>
+                <button class="btn-primary"><a href="public/images/cv_marie_sagehomme.pdf" download target="_blank">CV</a></button>
+                <button class="btn-primary"><a href="https://www.linkedin.com/in/marie-s-385520166/" target="_blank">Linkedin</a></button>
+            </div>
+            <p class="YYYY">20</p>
+        </nav>    
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>
