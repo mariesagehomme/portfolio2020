@@ -13,16 +13,33 @@
              {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
-    <body>
-        <nav class="main-menu">
-            <a href="{{ path('home') }}" class="logo">Portfolio</a>
-            <div>
-                <button class="btn-primary"><a href="https://github.com/mariesagehomme" target="_blank">Github</a></button>
-                <button class="btn-primary"><a href="public/images/cv_marie_sagehomme.pdf" download target="_blank">CV</a></button>
-                <button class="btn-primary"><a href="https://www.linkedin.com/in/marie-s-385520166/" target="_blank">Linkedin</a></button>
+    <body>        
+        <header class="header">
+            <nav class="main-menu">
+                <a href="{{ path('home') }}" class="logo">Portfolio</a>
+                <div>
+                   <button class="btn-primary"><a href="https://github.com/mariesagehomme" target="_blank">Github</a></button>
+                   <button class="btn-primary"><a href="public/images/cv_marie_sagehomme.pdf" download target="_blank">CV</a></button>
+                   <button class="btn-primary"><a href="https://www.linkedin.com/in/marie-s-385520166/" target="_blank">Linkedin</a></button>
+                </div>
+                <p class="YYYY">20</p>
+            </nav>    
+            <div class="box">
+                <div class="title">
+                    <div class="block">.</div>    
+                    <h1>Marie Sagehomme<span>.</span></h1>
+                </div>
+                <div class="role">
+                    <div class="block">.</div>
+                     <h2>Front-end developer</h2>
+                </div>
             </div>
-            <p class="YYYY">20</p>
-        </nav>    
+            <div class="intro">
+                <p>I'm a front-end developer & webdesigner who love creating websites, new design and coding! I'm curious and love sharing.
+                <button class="btn-secondary"><a href="">contact me</a></button> if you want more information about my works</p>
+            </div>    
+        </header>   
+
         {% block body %}{% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}

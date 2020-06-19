@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 18, 2020, 10:55:21 PM
+    Author     : Marie Sagehomme
+*/
+
+    
+.form-login {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: $primary-color;
+    padding: 20px;
+    margin: auto;
+
+
+    label, input {
+        margin: 10px;
+        color: white;
+    }
+
+}
+
+.btn {
+    color: white;
+    margin: 10px auto;
+    display: block
+ }
