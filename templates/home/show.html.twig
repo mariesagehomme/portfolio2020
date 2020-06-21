@@ -1,75 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}PORTFOLIO MARIE SAGEHOMME{% endblock %}
+{% block title %}Portfolio Marie Sagehomme{% endblock %}
 
 {% block body %}
-    <header class="header">
-        <div class="box">
-            <div class="title">
-                <div class="block">.</div>    
-                <h1>Marie Sagehomme<span>.</span></h1>
-            </div>
-            <div class="role">
-                <div class="block">.</div>
-                 <h2>Front-end developer</h2>
-            </div>
-        </div>
-    </header>   
-    <div class="intro">
-            <p>I'm a front-end developer & webdesigner who love creating websites, new design and coding! I'm curious and love sharing.
-                <button class="btn-secondary"><a href="">contact me</a></button> if you want more information about my works</p>
-    </div>
-    
-    <h3>Projects back</h3>
     <div class="container">
-        {% for projectBack in projectsBack %}
-            <div class="project-reservation">
-                <p>{{ projectBack.technology }}</p>
-                <p>{{ projectBack.name }}</p>
-                <p>{{ projectBack.date }}</p>
-                
-                {% if projectBack.link %}
-                    <button class="btn-primary"><a href="{{ projectBack.link }}" target="_blank">Github</a></button>
-                    {% else %}
-                    <button class="btn-primary"><a href="#" class="btn-primary">Show</a></button>
-                {% endif %}                
-            </div> 
-            <hr>
-        {% endfor %}
-     </div>
-     
-     <h3>Projects front</h3>
-     <div class="container">
-        {% for projectFront in projectsFront %}
-            <div class="project-reservation">
-                <p>{{ projectFront.technology }}</p>
-                <p>{{ projectFront.name }}</p>
-                <p>{{ projectFront.date }}</p>
-                
-                {% if projectFront.link %}
-                    <button class="btn-primary"><a href="{{ projectFront.link }}" target="_blank">Github</a></button>
-                    {% else %}
-                    <button class="btn-primary"><a href="#" class="btn-primary">Show</a></button>
-                {% endif %}                
-            </div> 
-            <hr>
-        {% endfor %}
-     </div>
-        
-    <h3>About me</h3>
-    <div class="carousel" data-flickity='{ "wrapAround": true }'>
-        <div class="carousel-cell">
-            <img src="{{ asset('images/manga.jpg') }}" alt="manga">
-        </div>
-        <div class="carousel-cell">
-            <img src="{{ asset('images/secret.jpg') }}" alt="secret">
-        </div>
-        <div class="carousel-cell">
-            <img src="{{ asset('images/eye.jpg') }}" alt="eye">
-        </div>
-        <div class="carousel-cell">
-            <img src="{{ asset('images/shadow.jpg') }}" alt="shadow">
-        </div>
-    </div>
+    <h2>{{ projects.technology }}</h2>
+    <h3>{{ projects.name }}</h3>
+    
+    
+    <div class="projects-item">
+        {% if projects.description %}
+            <p class="projects-item-text">{{ projects.description |nl2br }}</p>      
+        {% endif %}
 
+        {% if projects.picture %}
+            <p class="projects-item-picture"><img src="{{ asset('/images/' ~ projects.picture) }}"></p>
+        {% endif %}
+    </div>
 {% endblock %}

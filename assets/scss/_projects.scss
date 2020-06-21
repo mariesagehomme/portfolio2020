@@ -8,19 +8,13 @@ and open the template in the editor.
     Author     : Marie Sagehomme
 */
 
-.container {
+.projects-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
 
 
-    .project-portfolio, 
-    .project-reservation, 
-    .project-simon,
-    .project-drupal,
-    .project-bella-aurora,
-    .project-eaglestone,
-    .project-snake{
+    .project{
         display: flex;
         flex-direction: row;
         margin: 10px 0;

@@ -1,12 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}PORTFOLIO MARIE SAGEHOMME{% endblock %}
+{% block title %}Portfolio Marie Sagehomme{% endblock %}
 
 {% block body %}
-    <h3>Projects back</h3>
     <div class="container">
+    <div class="description">
+        <div class="box">
+            <div class="title">
+                <div class="block">.</div>    
+                <h1>Marie Sagehomme<span>.</span></h1>
+            </div>
+            <div class="role">
+                <div class="block">.</div>
+                 <h2>Front-end developer</h2>
+            </div>
+        </div>
+        <div class="intro">
+            <p>I'm a front-end developer & webdesigner who love creating websites, new design and coding! I'm curious and love sharing.
+            <button class="btn-secondary"><a href="mailto:marie.sagehomme@gmail.com">contact me</a></button> if you want more information about my works</p>
+        </div> 
+    </div>    
+    <h3>Projects back</h3>
+    <div class="projects-container">
         {% for projectBack in projectsBack %}
-            <div class="project-reservation">
+            <div class="project">
                 <p>{{ projectBack.technology }}</p>
                 <p>{{ projectBack.name }}</p>
                 <p>{{ projectBack.date }}</p>
@@ -22,9 +39,9 @@
      </div>
      
      <h3>Projects front</h3>
-     <div class="container">
+     <div class="projects-container">
         {% for projectFront in projectsFront %}
-            <div class="project-reservation">
+            <div class="project">
                 <p>{{ projectFront.technology }}</p>
                 <p>{{ projectFront.name }}</p>
                 <p>{{ projectFront.date }}</p>
@@ -32,14 +49,14 @@
                 {% if projectFront.link %}
                     <button class="btn-primary"><a href="{{ projectFront.link }}" target="_blank">Github</a></button>
                     {% else %}
-                    <button class="btn-primary"><a href="#" class="btn-primary">Show</a></button>
+                    <button class="btn-primary"><a href=" {{ path('home_show', {'id':projectFront.id}) }}">Show</a></button>
                 {% endif %}                
             </div> 
             <hr>
         {% endfor %}
      </div>
         
-    <h3>About me</h3>
+    <h3>Photography</h3>
     <div class="carousel" data-flickity='{ "wrapAround": true }'>
         <div class="carousel-cell">
             <img src="{{ asset('images/manga.jpg') }}" alt="manga">
@@ -54,5 +71,6 @@
             <img src="{{ asset('images/shadow.jpg') }}" alt="shadow">
         </div>
     </div>
+    </div>      
 
 {% endblock %}

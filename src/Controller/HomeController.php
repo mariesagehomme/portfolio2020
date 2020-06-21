@@ -26,4 +26,17 @@ class HomeController extends AbstractController
             'projectsFront' => $projectsFront,
         ]);
     }
+    
+     /**
+     * @Route("/{id}", name="home_show", requirements={"id":"\d+"})
+     */
+    public function show(Projects $projects)
+    {
+        //$repository = $this->getDoctrine()->getRepository(Show::class);
+        //$show = $repository->find($id);
+
+        return $this->render('home/show.html.twig', [
+            'projects' => $projects,
+        ]);
+    }
 }

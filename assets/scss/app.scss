@@ -25,12 +25,15 @@ body {
     font-family: $font;
     font-weight: 200;
     text-transform: uppercase;
-    max-width: $width-mobile;
-    padding: 20px;
-    margin: auto;
     
-    @include respond-to(medium) {
-        max-width: $width;
+    .container {
+        width: $width-mobile;
+        margin: auto;
+        padding: 20px;
+        
+        @include respond-to(medium) {
+            width: $width;
+        }
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -50,7 +53,7 @@ body {
         }
        
        @include respond-to(medium) {
-            font-size: 7em;
+            font-size: 6em;
         }
     }
 
@@ -75,5 +78,51 @@ body {
     }
 }
 
+.projects-item {
+    display: flex;
+    flex-direction: column;
+    
+        @include respond-to(medium) {
+        flex-direction: row;
+        }
+    
+    .projects-item-text {
+        font-weight: 100;
+        font-size: 1em;
+        text-transform: lowercase;
+        max-width: 400px;
 
+        
+        @include respond-to(medium) {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding: 0 20px 0 0;
+            width: 100%;
+        }
+    }
+}
 
+footer {
+    padding-top: 30px;
+    
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 50px;
+        
+        @include respond-to(medium) {
+            flex-direction: row;
+        }
+        
+        .copyright, .techno, .author {
+            font-size: 1.5em;
+            font-weight: 100;
+            color: $secondary-color;
+            
+            @include respond-to(medium) {
+                font-size: 1em;
+            }
+        }
+    }
+}
